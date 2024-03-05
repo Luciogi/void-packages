@@ -1,17 +1,15 @@
 # Template file for 'bluedevil'
 pkgname=bluedevil
-version=5.27.10
+version=6.0.1
 revision=1
 build_style=cmake
-configure_args="-DBUILD_TESTING=OFF -DKF5_HOST_TOOLING=/usr/lib/cmake"
-hostmakedepends="extra-cmake-modules qt5-qmake qt5-host-tools
- kpackage-devel kconfig-devel kcoreaddons-devel gettext
- kcmutils-devel"
-makedepends="bluez-qt5-devel kded-devel kio-devel plasma-framework-devel
- kcmutils-devel"
+configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake"
+hostmakedepends="extra-cmake-modules qt6-base qt6-tools gettext"
+makedepends="kf6-bluez-qt-devel kf6-kded-devel kf6-kio-devel kf6-kcmutils-devel
+ kf6-ksvg-devel kf6-kpackage-devel libplasma-devel"
 short_desc="KDE Bluetooth integration"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/bluedevil"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=771fd58c2e1945e9f375598a5d1120671d9142d95580f08ec22494dd4d7fa180
+checksum=edba73e323585af4e0cc786d0806577259113fd7cb1fab0f62cbc738bd7fe779

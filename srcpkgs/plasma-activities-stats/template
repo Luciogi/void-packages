@@ -1,0 +1,24 @@
+# Template file for 'plasma-activities-stats'
+pkgname=plasma-activities-stats
+version=6.0.1
+revision=1
+build_style=cmake
+hostmakedepends="extra-cmake-modules qt6-base qt6-tools"
+makedepends="kf6-kconfig-devel plasma-activities-devel
+ boost-devel"
+short_desc="Library for accessing the usage data collected by the activities system"
+maintainer="John <me@johnnynator.dev>"
+license="GPL-3.0-or-later"
+homepage="https://invent.kde.org/plasma/plasma-activities-stats"
+distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
+checksum=779ff55a449b9745295a7dcbff9a22abb4d4f0f74a807219674f624f7b55a6ea
+
+plasma-activities-stats-devel_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/cmake
+		vmove "usr/lib/*.so"
+	}
+}

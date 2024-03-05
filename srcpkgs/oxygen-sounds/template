@@ -1,6 +1,6 @@
 # Template file for 'oxygen-sounds'
 pkgname=oxygen-sounds
-version=5.27.10
+version=6.0.1
 revision=1
 build_style=cmake
 hostmakedepends="extra-cmake-modules"
@@ -9,4 +9,4 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-3.0-or-later"
 homepage="https://invent.kde.org/plasma/oxygen-sounds"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=23a1f090aaeee966476ff03aecad1f60b1e067d7948edd1b61c3a5d2b33bc35f
+checksum=6cc6d4ebc74a5b5ee82db120f6d757dbc17f9b70912798400a201332319b7a8f

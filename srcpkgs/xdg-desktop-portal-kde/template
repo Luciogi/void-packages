@@ -1,16 +1,17 @@
 # Template file for 'xdg-desktop-portal-kde'
 pkgname=xdg-desktop-portal-kde
-version=5.27.10
+version=6.0.1
 revision=1
 build_style=cmake
 configure_args="-DWaylandScanner_EXECUTABLE=/usr/bin/wayland-scanner"
-hostmakedepends="extra-cmake-modules qt5-qmake qt5-host-tools kcoreaddons gettext
- kpackage wayland-devel plasma-wayland-protocols pkg-config qt5-wayland"
-makedepends="glib-devel kio-devel kwayland-devel libepoxy-devel pipewire-devel
- plasma-framework-devel kdeclarative-devel kirigami2-devel"
+hostmakedepends="extra-cmake-modules qt6-base qt6-tools gettext
+ wayland-devel plasma-wayland-protocols pkg-config qt6-wayland"
+makedepends="kf6-kio-devel kf6-kdeclarative-devel kf6-kirigami-devel
+ kf6-kstatusnotifieritem-devel libplasma-devel kwayland-devel
+ libepoxy-devel pipewire-devel glib-devel"
 short_desc="Backend implementation for xdg-desktop-portal that is using Qt/KF5"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-3.0-or-later"
 homepage="https://phabricator.kde.org/source/xdg-desktop-portal-kde/"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=bd731ff0c3e27293728292e1b07276af53ad8a4fbbb915f1d0fd77b99d7bef2b
+checksum=da4a0b864ca176e8ce19f6e15d27c8f919323a51a0724ec82378179c3158d999

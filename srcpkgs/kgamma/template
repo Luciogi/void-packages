@@ -1,0 +1,22 @@
+# Template file for 'kgamma'
+pkgname=kgamma
+version=6.0.1
+revision=1
+build_style=cmake
+configure_args="-DBUILD_TESTING=OFF"
+hostmakedepends="extra-cmake-modules gettext kf6-kcoreaddons 
+ kf6-kdoctools qt6-tools"
+makedepends="kdesignerplugin-devel kf6-kdoctools-devel
+ libXxf86vm-devel"
+short_desc="KDE gamma adjustiment app"
+maintainer="Luciogi <lucigithubcommit@skiff.com>"
+license="GPL-2.0-or-later"
+homepage="https://invent.kde.org/plasma/kgamma5"
+distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
+checksum=fb60953628df9707d7ba83155d5828d5f44d093ed841974c78ee9a74ece3c912
+
+kgamma5_package() {
+	build_style=meta
+	short_desc+=" - (transitional dummy package)"
+	depends="${sourcepkg}>=${version}_${revision}"
+}

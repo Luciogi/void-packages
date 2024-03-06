@@ -1,0 +1,16 @@
+# Template file for 'kdeplasma-addons'
+pkgname=kdeplasma-addons
+version=6.0.1
+revision=1
+build_style=cmake
+configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake"
+hostmakedepends="extra-cmake-modules qt6-tools pkg-config
+ kf6-kpackage-devel kf6-kconfig-devel kf6-kcoreaddons-devel kf6-kcmutils-devel gettext"
+makedepends="kross-devel kdesignerplugin-devel kf6-kdoctools-devel kf6-kholidays-devel
+ plasma-workspace-devel kf6-purpose-devel NetworkManager-devel"
+short_desc="Various Plasma addons"
+maintainer="Luciogi <lucigithubcommit@skiff.com>"
+license="GPL-2.0-or-later, LGPL-2.1-or-later"
+homepage="https://invent.kde.org/plasma/kdeplasma-addons"
+distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
+checksum=6458e605d258e0b2a42d6014c336802c10df1af3fe14f34d0fdbf9e931cd2b6f

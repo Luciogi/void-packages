@@ -6,8 +6,8 @@ build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
 hostmakedepends="extra-cmake-modules gettext kf6-kcoreaddons 
  kf6-kdoctools qt6-tools"
-makedepends="kdesignerplugin-devel kf6-kdoctools-devel
- libXxf86vm-devel"
+makedepends="kf6-kdoctools-devel libXxf86vm-devel libplasma-devel
+ kf6-kcmutils-devel kf6-kconfigwidgets"
 short_desc="KDE gamma adjustiment app"
 maintainer="Luciogi <lucigithubcommit@skiff.com>"
 license="GPL-2.0-or-later"

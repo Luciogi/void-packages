@@ -12,7 +12,7 @@ hostmakedepends="extra-cmake-modules pkg-config kf6-kcoreaddons kf6-kdoctools
 makedepends="ibus-devel plasma-activities-stats-devel kf6-kpeople-devel libcanberra-devel
  plasma-workspace-devel pulseaudio-devel xf86-input-evdev-devel
  xf86-input-synaptics-devel xf86-input-libinput-devel kf6-solid-devel
- kaccounts-integration-devel libaccounts-qt5-devel"
+ libaccounts-qt6-devel"
 depends="kmenuedit polkit-kde-agent powerdevil systemsettings
  accountsservice ksystemstats"
 short_desc="KDE Plasma Desktop"

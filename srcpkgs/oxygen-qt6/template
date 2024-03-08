@@ -4,7 +4,7 @@ version=6.0.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DBUILD_QT5=OFF"
-hostmakedepends="extra-cmake-modules pkg-config qt6-base qt6-tools"
+hostmakedepends="extra-cmake-modules pkg-config qt6-base qt6-tools gettext"
 makedepends="kdecoration-devel kf6-frameworkintegration-devel kf6-kcmutils-devel
  libplasma-devel"
 short_desc="Oxygen visual style for the Plasma Desktop"

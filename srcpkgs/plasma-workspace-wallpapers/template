@@ -4,7 +4,7 @@ version=6.0.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
-hostmakedepends="extra-cmake-modules qt5-qmake qt5-host-tools"
+hostmakedepends="extra-cmake-modules"
 short_desc="KDE Plasma wallpapers"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"

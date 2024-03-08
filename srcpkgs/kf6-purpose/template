@@ -8,7 +8,7 @@ hostmakedepends="extra-cmake-modules qt6-tools qt6-base
 # kaccounts-integration-devel
 makedepends="qt6-declarative-devel kf6-kcoreaddons-devel kf6-ki18n-devel
  kf6-kirigami-devel kf6-knotifications-devel kf6-kio-devel"
-depends="qt6-accounts-qml-module kaccounts-providers"
+depends="qt6-accounts-qml-module"
 short_desc="Offers available actions for a specific purpose"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"

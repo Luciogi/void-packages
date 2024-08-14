@@ -4,19 +4,9 @@ version=4.4.3
 revision=1
 archs="x86_64"
 build_style=python3-module
-hostmakedepends="python3-devel
-		python3-setuptools
-		python3-gobject
-		python3-dbus
-		python3-proton-vpn-api-core
-		python3-proton-vpn-logger
-		python3-dbus
-		python3-packaging
-		gtk+3
-		desktop-file-utils
-		librsvg
-		libappindicator"
-depends="python3-cryptography"
+hostmakedepends="python3-setuptools"
+makedepends="python3-proton-core python3-proton-vpn-api-core python3-proton-vpn-logger python3-proton-keyring-linux python3-proton-keyring-linux-secretservice python3-proton-vpn-killswitch-network-manager python3-proton-vpn-killswitch-network-manager-wireguard python3-proton-vpn-network-manager python3-proton-vpn-network-manager-openvpn python3-proton-vpn-network-manager-wireguard"
+depends="python3-cryptography gtk+3 python3-proton-core python3-proton-vpn-api-core python3-proton-vpn-logger python3-proton-keyring-linux python3-proton-keyring-linux-secretservice python3-proton-vpn-killswitch-network-manager python3-proton-vpn-killswitch-network-manager-wireguard python3-proton-vpn-network-manager python3-proton-vpn-network-manager-openvpn python3-proton-vpn-network-manager-wireguard"
 short_desc="Proton VPN graphical app"
 maintainer="Luciogi"
 license="GPL-3.0-only"

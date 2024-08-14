@@ -1,0 +1,14 @@
+# Template file for 'python3-proton-vpn-killswitch-network-manager'
+pkgname=python3-proton-vpn-killswitch-network-manager
+version=0.5.0
+revision=1
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+makedepends="python3-proton-vpn-api-core python3-proton-vpn-network-manager"
+depends=""
+short_desc="The proton-vpn-killswitch-network-manager component is the implementation of the proton-vpn-killswitch interface using Network Manager"
+maintainer="Luciogi <githubvoidlinux.supremacy429@passinbox.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/ProtonVPN/python-proton-vpn-killswitch-network-manager"
+distfiles="https://github.com/ProtonVPN/python-proton-vpn-killswitch-network-manager/archive/refs/tags/v${version}.tar.gz"
+checksum=ec7200dee647e7863c9839c32f6dd346badc92207b3014b3280c790a05e656f3

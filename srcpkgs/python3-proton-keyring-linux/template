@@ -1,0 +1,14 @@
+# Template file for 'python3-proton-keyring-linux'
+pkgname=python3-proton-keyring-linux
+version=0.0.2
+revision=1
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+makedepends=""
+depends="python3-keyring"
+short_desc="The proton-keyring-linux component"
+maintainer="Luciogi <githubvoidlinux.supremacy429@passinbox.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/ProtonVPN/python-proton-keyring-linux"
+distfiles="https://github.com/ProtonVPN/python-proton-keyring-linux/archive/refs/tags/v${version}.tar.gz"
+checksum=043b9d35eea5578503b1914313aeec1e1a56a80108555b91e63db37aeb7f3faa

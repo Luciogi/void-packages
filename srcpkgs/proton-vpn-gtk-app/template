@@ -1,0 +1,28 @@
+# Template file for 'proton-vpn-gtk-app'
+pkgname=proton-vpn-gtk-app
+version=4.4.3
+revision=1
+archs="x86_64"
+build_style=python3-module
+hostmakedepends="python3-devel
+		python3-setuptools
+		python3-gobject
+		python3-dbus
+		python3-proton-vpn-api-core
+		python3-proton-vpn-logger
+		python3-dbus
+		python3-packaging
+		gtk+3
+		desktop-file-utils
+		librsvg
+		libappindicator"
+depends="python3-cryptography"
+short_desc="Proton VPN graphical app"
+maintainer="Luciogi"
+license="GPL-3.0-only"
+homepage="https://github.com/ProtonVPN/proton-vpn-gtk-app"
+distfiles="https://github.com/ProtonVPN/proton-vpn-gtk-app/archive/refs/tags/v${version}.tar.gz"
+checksum=827b2ce2ffac8333194b53080bc7d4612ee4a09748212aa235376f671e851050
+do_build() {
+		python3 setup.py build
+}

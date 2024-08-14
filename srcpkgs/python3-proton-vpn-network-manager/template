@@ -1,0 +1,14 @@
+# Template file for 'python3-proton-vpn-network-manager'
+pkgname=python3-proton-vpn-network-manager
+version=0.5.0
+revision=1
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+makedepends=""
+depends=""
+short_desc="The proton-vpn-network-manager component provides the necessary functionality for other components to interact with NetworkManager"
+maintainer="Luciogi <githubvoidlinux.supremacy429@passinbox.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/ProtonVPN/python-proton-vpn-network-manager"
+distfiles="https://github.com/ProtonVPN/python-proton-vpn-network-manager/archive/refs/tags/v${version}.tar.gz"
+checksum=9e8581b6bb0ee24d25263a1773a033384d795fc63f79065685dab027345f3330

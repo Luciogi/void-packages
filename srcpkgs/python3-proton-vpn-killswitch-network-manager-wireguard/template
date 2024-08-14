@@ -1,0 +1,15 @@
+# Template file for 'python3-proton-vpn-killswitch-network-manager-wireguard'
+pkgname=python3-proton-vpn-killswitch-network-manager-wireguard
+version=0.1.0
+revision=1
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+makedepends=""
+depends="python3-proton-vpn-api-core python3-proton-vpn-network-manager"
+short_desc="The proton-vpn-killswitch-networ-managerwireguard component is the implementation of the proton-vpn-killswitch interface adapted for Wireguard."
+maintainer="Luciogi <githubvoidlinux.supremacy429@passinbox.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/ProtonVPN/python-proton-vpn-killswitch-network-manager-wireguard"
+#changelog=""
+distfiles="https://github.com/ProtonVPN/python-proton-vpn-killswitch-network-manager-wireguard/archive/refs/tags/v${version}.tar.gz"
+checksum=5e26f27aa32e9bfb59dc1d0072b3b0ff022208797e5aea61bd373b801519ab41

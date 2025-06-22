@@ -2,7 +2,7 @@
 # rebuild php8.4-apcu and php8.4-imagick when updating this package
 pkgname=php8.4
 version=8.4.7
-revision=1
+revision=2
 _php_version=8.4
 build_helper="qemu"
 hostmakedepends="bison pkg-config apache apache-devel autoconf"
@@ -120,6 +120,7 @@ do_build() {
 		--with-xsl=shared,$XBPS_CROSS_BASE/usr \
 		--with-zip=shared \
 		--with-zlib \
+		--enable-phar=shared \
 		${configure_args} \
 		"
 	if [ -n "$CROSS_BUILD" ]; then

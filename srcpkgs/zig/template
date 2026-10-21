@@ -1,11 +1,11 @@
 # Template file for 'zig'
 pkgname=zig
-version=0.16.0
+version=0.17.0
 revision=1
 archs="x86_64* aarch64*"
 build_style=cmake
 configure_args="-DZIG_TARGET_MCPU=baseline -DZIG_PIE=ON"
-_llvmver=21
+_llvmver=22
 # we add xml2, zstd, zlib and ncurses
 # because our lld is static-only and requires those to work
 makedepends="clang${_llvmver}-devel llvm${_llvmver}-devel lld${_llvmver}-devel
@@ -15,9 +15,11 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="https://ziglang.org"
 distfiles="https://ziglang.org/download/${version}/zig-${version}.tar.xz"
-checksum=43186959edc87d5c7a1be7b7d2a25efffd22ce5807c7af99067f86f99641bfdf
+checksum=b6c7f1728f043700d6529bac980800792f824256a9d2f1839b3d62beed0b8abd
 nocross=yes
 
 post_install() {
+	mkdir -p ${DESTDIR}/usr/share/doc/${pkgname}
+	mv ${DESTDIR}/usr/doc ${DESTDIR}/usr/share/doc/${pkgname}
 	vlicense LICENSE
 }

@@ -1,10 +1,10 @@
 # Template file for 'ncdu2'
 pkgname=ncdu2
-version=2.11.1
+version=2.12.0
 revision=1
 build_style=zig-build
 configure_args="-Dpie -fsys=ncurses -fsys=zstd"
-hostmakedepends="pkg-config"
+hostmakedepends="pkg-config strace ncurses-devel"
 makedepends="libzstd-devel ncurses-devel"
 short_desc="NCurses Disk Usage utility version 2"
 maintainer="tranzystorekk <tranzystorek.io@protonmail.com>"
@@ -12,8 +12,12 @@ license="MIT"
 homepage="https://github.com/BratishkaErik/ncdu"
 changelog="https://github.com/BratishkaErik/ncdu/releases"
 distfiles="https://github.com/BratishkaErik/ncdu/archive/refs/tags/v${version}.tar.gz"
-checksum=15fdf82c6e5c564ecfc0d794c2b6182972b5d80e37fff9a83c6c4e7af2c31a01
+checksum=cd55cb5dcd30f7a40b283e5e189aede8cffe69700aa9eae1208fd6fde79dc159
 conflicts="ncdu"
+
+if [ "$CROSS_BUILD" ]; then
+	configure_args+=" -Dinclude_dir=${XBPS_CROSS_BASE}/usr/include"
+fi
 
 post_install() {
 	vlicense LICENSES/MIT.txt

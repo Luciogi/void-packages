@@ -4,14 +4,10 @@ do_build() {
 	# TODO: This duplication between build-profiles and cross-profiles
 	# is totally unnecessary. It would be nice if there was some way to
 	# avoid it.
+	#
 	if [ "$CROSS_BUILD" ]; then
 		zig_target="${XBPS_CROSS_ZIG_TARGET}"
 		zig_cpu="${XBPS_CROSS_ZIG_CPU}"
-		zig_search_prefix=/
-	else
-		zig_target="${XBPS_ZIG_TARGET}"
-		zig_cpu="${XBPS_ZIG_CPU}"
-		zig_search_prefix=/usr
 	fi
 
 	# Inform zig of the required libc include paths.
@@ -19,9 +15,10 @@ do_build() {
 		include_dir=${XBPS_CROSS_BASE}/usr/include
 		sys_include_dir=${XBPS_CROSS_BASE}/usr/include
 		crt_dir=${XBPS_CROSS_BASE}/usr/lib
+		gcc_dir=$($CC -print-file-name="")
 		msvc_lib_dir=
 		kernel32_lib_dir=
-		gcc_dir=
+		darwin_sdk_dir=
 	EOF
 
 	# The Zig build system only has a single install step, there is no
@@ -30,16 +27,20 @@ do_build() {
 	# directory and later copy the artifacts to the destdir in do_install().
 	# We use zig-out to avoid path conflicts as it is the default install
 	# prefix used by the zig build system.
-	DESTDIR="zig-out" zig build \
+	cross_args=""
+	if [ "$CROSS_BUILD" ]; then
+		cross_args="-Dtarget=${zig_target} -Dcpu=${zig_cpu}"
+	fi
+
+	ZIG_GLOBAL_CACHE_DIR=/host/zig DESTDIR="zig-out" zig build \
 		${makejobs} \
 		--sysroot "${XBPS_CROSS_BASE:-/}" \
-		--search-prefix "${zig_search_prefix}" \
+		--search-prefix /usr \
 		--prefix /usr \
-		--global-cache-dir /host/zig \
 		--libc xbps_zig_libc.txt \
 		--release=safe \
 		--verbose \
-		-Dtarget="${zig_target}" -Dcpu="${zig_cpu}" \
+		${cross_args} \
 		install \
 		${configure_args}
 }
